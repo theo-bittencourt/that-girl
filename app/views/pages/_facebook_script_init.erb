@@ -7,13 +7,10 @@
       cookie     : true, // enable cookies to allow the server to access the session
       xfbml      : true  // parse XFBML
     });
-
+    
     // Additional initialization code here
-    FB.Canvas.setDoneLoading(
-      function (result) {
-        FB.Canvas.setSize();
-      }
-    );
+    
+    FB.Canvas.setAutoGrow();
     
   };
 
