@@ -9,8 +9,12 @@
     });
 
     // Additional initialization code here
+    FB.Canvas.setDoneLoading(
+      function (result) {
+        FB.Canvas.setSize();
+      }
+    );
     
-    FB.Canvas.setSize();
   };
 
   // Load the SDK Asynchronously
