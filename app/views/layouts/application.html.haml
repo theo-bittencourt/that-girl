@@ -10,6 +10,6 @@
     = csrf_meta_tags
   %body{ class: controller.action_name }
     #facebook-script-init
-      = render :partial => "pages/facebook_script_init"
+      = render :partial => "pages/facebook_script_init", locals: { app_id: @current_app_id }
     #global-container
       = yield

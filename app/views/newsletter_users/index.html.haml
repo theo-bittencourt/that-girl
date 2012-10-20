@@ -1,0 +1,21 @@
+%h1 Listing newsletter_users
+
+%table
+  %tr
+    %th Name
+    %th Email
+    %th
+    %th
+    %th
+
+  - @newsletter_users.each do |newsletter_user|
+    %tr
+      %td= newsletter_user.name
+      %td= newsletter_user.email
+      %td= link_to 'Show', newsletter_user
+      %td= link_to 'Edit', edit_newsletter_user_path(newsletter_user)
+      %td= link_to 'Destroy', newsletter_user, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Newsletter user', new_newsletter_user_path

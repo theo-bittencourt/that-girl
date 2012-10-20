@@ -1,0 +1,8 @@
+= simple_form_for(@newsletter_user, remote: true)  do |f|
+
+  .form-inputs
+    = f.input :name, label: false, placeholder: "DIGITE SEU NOME AQUI"
+    = f.input :email, label: false, placeholder: "DIGITE SEU EMAIL AQUI"
+
+  .form-actions
+    = f.button :submit, disable_with: "Enviando..."

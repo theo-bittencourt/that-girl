@@ -1,0 +1,26 @@
+pt-BR:
+  
+  helpers:
+    submit:
+      newsletter_user:
+        create: CADASTRAR!
+        
+  simple_form:
+    error_notification:
+      default_message: ''
+        
+        
+  activerecord:
+    errors:
+      models:
+        newsletter_user:
+          attributes:
+            name:
+              blank: não pode ficar em branco
+            email:
+              blank: não pode ficar em branco
+              
+  valid_email:
+    validations:
+      email:
+        invalid: "ops, parece que o email está errado"

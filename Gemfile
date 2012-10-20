@@ -28,3 +28,4 @@ gem "rspec-rails", ">= 2.11.0", :group => [:development, :test]
 gem "capybara", ">= 1.1.2", :group => :test
 gem "simple_form", ">= 2.0.2"
 gem "hub", ">= 1.10.2", :require => nil, :group => [:development]
+gem 'valid_email', :require => 'valid_email/email_validator'

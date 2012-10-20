@@ -1,0 +1,1 @@
+$("<%= @newsletter_user.errors %>").appendTo $(".form-inputs")
