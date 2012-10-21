@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 class Mailing < ActionMailer::Base
   default from: "test@theob.me"
   
