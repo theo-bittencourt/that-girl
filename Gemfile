@@ -1,9 +1,21 @@
 source 'https://rubygems.org'
+
 gem 'rails', '3.2.7'
+gem 'jquery-rails'
+gem "thin", ">= 1.4.1"
+gem "haml", ">= 3.1.7"
+gem "simple_form", ">= 2.0.2"
+gem 'valid_email', :require => 'valid_email/email_validator'
+gem "rspec-rails", ">= 2.11.0", :group => [:development, :test]
+gem "capybara", ">= 1.1.2", :group => :test
 
 group :development do
   gem 'sqlite3'
   gem 'debugger'
+  gem "haml-rails", ">= 0.3.4"
+  gem "hpricot", ">= 0.8.6"
+  gem "ruby_parser", ">= 2.3.1"
+  gem "hub", ">= 1.10.2", :require => nil
 end
 
 group :assets do
@@ -18,14 +30,3 @@ group :production do
   gem 'newrelic_rpm'
 end
 
-gem 'jquery-rails'
-gem "thin", ">= 1.4.1"
-gem "haml", ">= 3.1.7"
-gem "haml-rails", ">= 0.3.4", :group => :development
-gem "hpricot", ">= 0.8.6", :group => :development
-gem "ruby_parser", ">= 2.3.1", :group => :development
-gem "rspec-rails", ">= 2.11.0", :group => [:development, :test]
-gem "capybara", ">= 1.1.2", :group => :test
-gem "simple_form", ">= 2.0.2"
-gem "hub", ">= 1.10.2", :require => nil, :group => [:development]
-gem 'valid_email', :require => 'valid_email/email_validator'
