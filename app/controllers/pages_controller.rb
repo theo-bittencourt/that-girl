@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  protect_from_forgery :except => [:about_us_post]
+  protect_from_forgery :except => [:about_us, :newsletter]
   
   def about_us
     @current_app_id = ENV['ABOUT_US_APP_ID']

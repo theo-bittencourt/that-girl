@@ -1,0 +1,62 @@
+@mixin transparent($color: white, $alpha: 0.6) {
+  $rgba: rgba($color, $alpha);
+  $ie-hex-str: ie-hex-str($rgba);
+  background-color: transparent;
+  background-color: $rgba;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str})";
+  zoom: 1;
+}
+
+
+@mixin opacity($opacity){
+  -moz-opacity: $opacity;
+  -khtml-opacity: $opacity;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$opacity * 100})";
+  opacity: $opacity;
+  zoom: 1;
+}
+
+@mixin blur($radius: 10){ 
+  filter: progid:DXImageTransform.Microsoft.Blur(pixelradius=#{$radius});
+  -ms-filter: blur($radius + px);
+  -moz-filter: blur($radius + px);
+  -o-filter: blur($radius + px);
+  -webkit-filter: blur($radius + px);
+  
+}
+
+@mixin drop-shadow($color: #000, $enabled:'Enabled', $offX: 3, $OffX: 3, $positive:'Positive'){
+  filter: progid:DXImageTransform.Microsoft.DropShadow(#{$color, $enabled, $offX, $OffX, $positive});
+}
+
+@mixin light-border($position: 'bottom'){
+  @if $position == 'top' {
+    border-top: 2px solid transparentize($white, 0.5)
+  }
+  @if $position == 'bottom' {
+    border-bottom: 2px solid transparentize($white, 0.5)
+  }
+  @if $position == 'left' {
+    border-left: 2px solid transparentize($white, 0.5)
+  }
+  @if $position == 'right' {
+    border-right: 2px solid transparentize($white, 0.5)
+  }
+}
+
+
+@mixin select-none(){
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin text-shadow($shadow: 1px 1px 2px $black){
+  -webkit-text-shadow: #{$shadow};
+  -moz-text-shadow: #{$shadow};
+  -o-text-shadow: #{$shadow};
+  text-shadow: #{$shadow};
+}
