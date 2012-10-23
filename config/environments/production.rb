@@ -31,10 +31,9 @@ ThatGirl::Application.configure do
 
   config.action_mailer.smtp_settings = {
     address: "smtpout.secureserver.net",
-    port: 465,
+    port: 80,
     domain: "thatgirl.com.br",
     authentication: "plain",
-    enable_starttls_auto: true,
     user_name: ENV["MAIL_USERNAME"],
     password: ENV["MAIL_PASSWORD"]
   }
