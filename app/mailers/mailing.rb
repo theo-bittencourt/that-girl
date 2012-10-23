@@ -5,6 +5,6 @@ class Mailing < ActionMailer::Base
   
   def notifies_admin(newsletter_user)
     @newsletter_user = newsletter_user
-    mail(:to => @newsletter_user.email, :subject => "Nova inscrição newsletter - Fanpage", cc: "mail@theob.me")
+    mail(:to => "sac@thatgirl.com.br", :subject => "Nova inscrição newsletter - Fanpage", cc: "mail@theob.me")
   end
 end
