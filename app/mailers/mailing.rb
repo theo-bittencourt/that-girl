@@ -1,7 +1,7 @@
 # encoding: UTF-8
 
 class Mailing < ActionMailer::Base
-  default from: "test@theob.me"
+  default from: "fanpage@thatgirl.com.br"
   
   def notifies_admin(newsletter_user)
     @newsletter_user = newsletter_user
