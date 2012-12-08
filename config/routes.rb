@@ -1,4 +1,6 @@
 ThatGirl::Application.routes.draw do
+  ActiveAdmin.routes(self)
+  
   resources :newsletter_users
 
   root :to => "pages#about_us"

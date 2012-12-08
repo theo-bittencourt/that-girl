@@ -26,7 +26,12 @@ module ThatGirl
     # Custom directories with classes and modules you want to be autoloadable.
     # config.autoload_paths += %W(#{config.root}/extras)
     config.autoload_paths += %W(#{config.root}/lib)
-
+    
+    # Precompile the Active Admin assets.
+    config.assets.precompile += %w[active_admin.css active_admin/print.css active_admin.js]
+    
+    # not access the DB or load models when precompiling your assets - heroku hack
+    config.assets.initialize_on_precompile = false
 
     # Only load the plugins named here, in the order given (default is alphabetical).
     # :all can be used as a placeholder for all plugins not explicitly named.
