@@ -42,7 +42,7 @@ Product.create!(
       availability: false
     },
     {
-      image: File.open(File.join(Rails.root, "db/seeds_files/sabonete_líquido_del_isi_osa.png")),
+      image: File.open(File.join(Rails.root, "db/seeds_files/sabonete_liquido_del_isi_osa.png")),
       title: "sabonete líquido del-isi-osa",
       category_id: @banho.id,
       price: "45,00",
@@ -51,7 +51,7 @@ Product.create!(
       availability: true
     },
     {
-      image: File.open(File.join(Rails.root, "db/seeds_files/sabonete_líquido_garota_marota.png")),
+      image: File.open(File.join(Rails.root, "db/seeds_files/sabonete_liquido_garota_marota.png")),
       title: "sabonete líquido garota marota",
       category_id: @banho.id,
       price: "45,00",
@@ -60,7 +60,7 @@ Product.create!(
       availability: true
     },
     {
-      image: File.open(File.join(Rails.root, "db/seeds_files/sabonete_líquido,_sim_sou_limpinha.png")),
+      image: File.open(File.join(Rails.root, "db/seeds_files/sabonete_liquido_sim_sou_limpinha.png")),
       title: "sabonete líquido, sim sou limpinha",
       category_id: @banho.id,
       price: "45,00",
@@ -78,7 +78,7 @@ Product.create!(
       availability: true
     },
     {
-      image: File.open(File.join(Rails.root, "db/seeds_files/that_girl_sutiã_clip.png")),
+      image: File.open(File.join(Rails.root, "db/seeds_files/that_girl_sutia_clip.png")),
       title: "that girl sutiã clip",
       category_id: @acessorios.id,
       price: "19,00",
