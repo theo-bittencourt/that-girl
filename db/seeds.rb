@@ -13,8 +13,8 @@ end
 @banho      = Category.create!({ title: "banho",       position: 1 })
 @acessorios = Category.create!({ title: "acessórios",  position: 2 })
 
-Product.create!(
-  [ {
+
+[  {
       image: File.open(File.join(Rails.root, "db/seeds_files/caneta_removedora_de_manchas.png")),
       title: "caneta removedora de manchas",
       category_id: @acessorios.id,
@@ -86,4 +86,8 @@ Product.create!(
       alternative_price: nil,
       availability: true
     } 
-])
+].each do |product|
+  Product.create!(product)
+end
+
+
