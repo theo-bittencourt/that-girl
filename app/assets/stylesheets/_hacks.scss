@@ -1,4 +1,8 @@
-//remove borda serrilhada no firefox
-a:hover, a:active, a:focus {
+// remove borda serrilhada no firefox
+// remove decoration de links
+// remove cor azul padrão dos links
+a, a:hover, a:active, a:focus {
   outline: 0;
+  text-decoration: none;
+  color: black;
 }

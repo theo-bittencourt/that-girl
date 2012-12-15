@@ -11,6 +11,30 @@ pt-BR:
         
         
   activerecord:
+    models:
+      product:
+        one: Produto
+        other: Produtos
+      category:
+        one: Categoria
+        other: Categorias
+    attributes:
+      common_attributes: &common_attributes
+        created_at: Criado Em
+        updated_at: Atualizado Em
+      product:
+        title: Título
+        price: Preço
+        image: Imagem
+        availability: Disponível?
+        active: Ativo?
+        alternative_price: Preço Alternativo
+        category_id: Categoria
+        category: Categoria
+        <<: *common_attributes
+      category:
+        title: Título
+        
     errors:
       models:
         newsletter_user:
@@ -19,6 +43,7 @@ pt-BR:
               blank: não pode ficar em branco
             email:
               blank: não pode ficar em branco
+           
               
   valid_email:
     validations:

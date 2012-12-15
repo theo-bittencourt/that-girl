@@ -1,0 +1,16 @@
+.product
+  = link_to product.link, target: "_blank" do
+    .product-image-wrapper= image_tag product.image_url(:index), class: "product-image"
+    .product-title= product.title
+  
+  - if !product.availability
+    .product-availability Produto Esgotado
+  - else
+    .product-price= number_to_currency product.price
+  
+    - if product.alternative_price
+      .product-alternative-price
+        %span ou
+        %br
+        %span= product.alternative_price
+    

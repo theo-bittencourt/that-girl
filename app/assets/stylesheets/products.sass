@@ -1,0 +1,82 @@
+header
+  margin-top: 40px
+  text-align: center
+
+.category
+  width: 72%
+  padding: 20px 0px
+  position: relative
+  margin: 25px auto 50px 110px
+  float: left
+  +box-sizing(border-box)
+  +border-radius($radius: 15px)
+  
+  
+  .category-title
+    font-family: FuturaStd-Medium, sans-serif
+    font-size: 25px
+    text-transform: uppercase
+    display: inline-block
+    padding: 10px
+    position: absolute
+    top: -30px
+    left: -1px
+    +border-radius($radius: 15px)
+    
+
+.category.odd
+  background: #fff image_url("shop/pink_dot.png")
+  border: 1px solid darken($pink, 15%)
+  .category-title
+    background-color: $green
+    border: 1px solid darken($green, 15%)
+    
+
+.category.even
+  background: #fff image_url("shop/green_dot.png")
+  border: 1px solid darken($green, 15%)
+  .category-title
+    background-color: $pink
+    border: 1px solid darken($pink, 15%)
+    
+
+.product
+  display: inline-block
+  float: left
+  width: 152px
+  height: 280px
+  padding: 10px 20px
+  margin: 10px auto
+  border-right: 2px dotted white
+  font-family: FuturaStd-Medium, sans-serif
+  overflow: hidden
+  font-size: 12px
+  text-align: center
+  &:nth-child(3n+1)
+    border-right: none
+
+.product .product-image-wrapper
+  height: 175px
+  margin-bottom: 10px
+
+.product .product-image
+  max-width: 100%
+  max-height: 175px
+  margin-left: -9999px
+
+.product .product-title
+  text-transform: uppercase
+  font-weight: bold
+  text-align: center
+  margin-bottom: 10px
+  line-height: 1.2em
+
+.product .product-price,
+.product .product-alternative-price
+  text-align: center
+  font-weight: bold
+  color: lighten(black, 20%)
+  font-size: 13px
+  line-height: 1.3em
+  
+  

@@ -6,6 +6,8 @@ ActiveAdmin.setup do |config|
   # for each of the active admin pages.
   #
   config.site_title = "That Girl"
+  
+  config.before_filter lambda { I18n.locale = :"pt-BR" }
 
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
@@ -115,7 +117,7 @@ ActiveAdmin.setup do |config|
   #
   # Enable and disable Batch Actions
   #
-  config.batch_actions = true
+  config.batch_actions = false
 
 
   # == Controller Filters

@@ -1,0 +1,11 @@
+%header
+  %img{ src: image_path("shop/shop_header.jpg") }
+  
+- @categories.each do |category|
+  .category{ class: cycle("odd", "even") }
+    .category-title= category.title
+    - category.active_products.each do |product|
+      = render :partial => "product", locals: { product: product }
+          
+  
+  
