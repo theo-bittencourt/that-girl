@@ -1,14 +1,16 @@
 CarrierWave.configure do |config|
   
-  config.fog_directory = "theobittencourt.work"
   
   config.fog_credentials = {
     :provider               => 'AWS',
     :aws_access_key_id      => ENV['AWS_ACCESS_KEY_ID'],
     :aws_secret_access_key  => ENV['AWS_SECRET_ACCESS_KEY'],
-    :region                 => 'sa-east-1',
-    :endpoint               => "http://#{config.fog_directory}.s3.amazonaws.com"
+    :region                 => 'sa-east-1'
   }
+  
+  config.fog_directory = "theobittencourt.work"
+  config.fog_host       = "http://#{config.fog_directory}.s3.amazonaws.com"
+  
   
   if Rails.env.development?
     config.storage = :file
