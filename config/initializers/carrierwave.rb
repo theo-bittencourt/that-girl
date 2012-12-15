@@ -9,8 +9,6 @@ CarrierWave.configure do |config|
   }
   
   config.fog_directory = "theobittencourt.work"
-  config.fog_host       = "http://#{config.fog_directory}.s3.amazonaws.com"
-  
   
   if Rails.env.development?
     config.storage = :file
