@@ -9,13 +9,13 @@ CarrierWave.configure do |config|
   }
   
   config.fog_directory = "theobittencourt.work"
-  config.asset_host = "http://theobittencourt.work.s3.amazonaws.com"
   
   if Rails.env.development?
     config.storage = :file
   end
   
   if Rails.env.production?
+    config.asset_host = "http://theobittencourt.work.s3.amazonaws.com"
     config.storage = :fog
   end
   
