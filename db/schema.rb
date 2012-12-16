@@ -54,6 +54,13 @@ ActiveRecord::Schema.define(:version => 20121208202838) do
     t.datetime "updated_at",                   :null => false
   end
 
+  create_table "newsletter_users", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "products", :force => true do |t|
     t.string   "title"
     t.decimal  "price",             :precision => 6, :scale => 2
