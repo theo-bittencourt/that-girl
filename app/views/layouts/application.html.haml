@@ -7,9 +7,17 @@
     %meta{:content => "mail_at_theob.me", :name => "author"}/
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
+    /[if (gte IE 6)&(lte IE 8)]
+      = javascript_include_tag "vendor/selectivizr.js"
+    /[if lt IE 9]
+      = javascript_include_tag "vendor/html5shiv.js"
+      
     = csrf_meta_tags
   %body{ class: [controller_name, controller.action_name].join(' ') }
     #facebook-script-init
       = render :partial => "pages/facebook_script_init", locals: { app_id: @current_app_id }
     #global-container
       = yield
+
+
+    

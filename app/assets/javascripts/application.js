@@ -1,5 +1,8 @@
 //= require jquery
 //= require jquery_ujs
-//= require underscore-min
+//= require vendor/underscore-min
 //= require placeholder_fix
-//= require_tree .
+//= require pages
+//= require newsletter_users
+//= require products
+

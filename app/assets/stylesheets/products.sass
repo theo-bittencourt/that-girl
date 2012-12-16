@@ -1,6 +1,8 @@
 header
   margin-top: 40px
-  text-align: center
+  img
+    display: block
+    margin: 0 auto
 
 .category
   width: 72%
@@ -10,7 +12,6 @@ header
   float: left
   +box-sizing(border-box)
   +border-radius($radius: 15px)
-  
   
   .category-title
     font-family: FuturaStd-Medium, sans-serif
@@ -22,6 +23,8 @@ header
     top: -30px
     left: -1px
     +border-radius($radius: 15px)
+    // hack para o IE - smooth-font
+    +transparent($alpha: 0.01)
     
 
 .category.odd
@@ -54,6 +57,8 @@ header
   text-align: center
   &:nth-child(3n+1)
     border-right: none
+  // hack para o IE - smooth-font
+  +transparent($alpha: 0.01)
 
 .product .product-image-wrapper
   height: 175px
