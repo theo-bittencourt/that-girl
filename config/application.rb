@@ -28,7 +28,7 @@ module ThatGirl
     config.autoload_paths += %W(#{config.root}/lib)
     
     # Precompile the Active Admin assets.
-    config.assets.precompile += %w[active_admin.css active_admin/print.css active_admin.js]
+    config.assets.precompile += %w[active_admin.css active_admin/print.css active_admin.js vendor/selectivizr.js vendor/html5shiv.js]
     
     # not access the DB or load models when precompiling your assets - heroku hack
     config.assets.initialize_on_precompile = false
