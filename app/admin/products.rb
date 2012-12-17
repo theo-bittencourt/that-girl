@@ -23,7 +23,7 @@ ActiveAdmin.register Product do
       img src: p.image.url(:index), height: "100px", width: "auto"
     end
     column :title do |p|
-      para link_to(p.title, p.link)
+      para link_to(p.title, edit_admin_product_path(p))
     end
     column :price, sortable: :price do |p|
       para number_to_currency(p.price)
