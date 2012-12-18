@@ -8,9 +8,9 @@
   - else
     .product-price= number_to_currency product.price
   
-    - if product.alternative_price
+    - if product.alternative_price.present?
       .product-alternative-price
-        %span ou
-        %br
+        %div.or ou
         %span= product.alternative_price
-    
+    - else
+      .a-vista à vista

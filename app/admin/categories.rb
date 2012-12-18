@@ -8,12 +8,14 @@ ActiveAdmin.register Category do
     column :title
     column "Produtos" do |c|
       c.products.each do |p|
-        img src: p.image.url(:index), height: "100px", width: "auto", title: p.title
+        img(src: p.image.url(:index), height: "100px", width: "auto", title: p.title)
       end
     end
     column :active do |c|
       para link_to '', toggle_active_admin_category_path(id: c.id), class: (c.active? ? 'true' : 'false')
     end
+    
+    default_actions
   end
   
   form do |c|
@@ -21,6 +23,7 @@ ActiveAdmin.register Category do
       c.input :title
       c.input :active, hint: "Marque esta opção para habilidar o produto na página de produtos."
     end
+    c.buttons
   end
   
   # This action is called by javascript when you drag and drop a column
@@ -38,6 +41,24 @@ ActiveAdmin.register Category do
     category.toggle_active!
     redirect_to :back
   end
+  
+  controller do
+    def create
+      create! { |success,failure|
+        success.html do
+          redirect_to admin_categories_path
+        end
+      }
+    end
+    def update
+      update! { |success,failure|
+        success.html do
+          redirect_to admin_categories_path
+        end
+      }
+    end
+  end
+  
   
   
 end

@@ -45,12 +45,12 @@ ActiveAdmin.register Product do
     p.inputs do
       p.input :category
       p.input :title
-      p.input :price, hint: "Apenas números separados por ponto. Ex.  32.99"
-      p.input :alternative_price, hint: "Outra forma de pagamento. Ex.  3 x R$ 11,90"
+      p.input :price, hint: "Apenas números separados por ponto. Ex. 32.99"
+      p.input :alternative_price, hint: "Ex.:  3 x R$ 11,90"
       p.input :availability, hint: "Caso esta opção não seja marcada, o aviso 'Produto Esgotado' será mostrado."
       p.input :active, hint: "Marque esta opção para habilidar o produto na página de produtos."
-      p.input :link, hint: "Link externo para a loja"
-      p.input :image, hint: (image_tag(p.object.image.url, height: 150, width: 'auto') if p.object.image.present?)
+      p.input :link, hint: "Ex.: http://www.thatgirl.com.br/acessorios/nao-de-bobeira"
+      p.input :image, hint: (image_tag(p.object.image_url(:index), height: 150, width: 'auto') if p.object.image.present?)
     end
       
     p.buttons
@@ -81,5 +81,21 @@ ActiveAdmin.register Product do
     redirect_to :back
   end
   
+  controller do
+    def create
+      create! { |success,failure|
+        success.html do
+          redirect_to admin_products_path
+        end
+      }
+    end
+    def update
+      update! { |success,failure|
+        success.html do
+          redirect_to admin_products_path
+        end
+      }
+    end
+  end
   
 end
