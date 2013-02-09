@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.7'
+gem 'rails', '3.2.11'
+gem 'rack', '1.4.5'
 gem 'pg'
 gem 'jquery-rails'
 gem "thin", ">= 1.4.1"
